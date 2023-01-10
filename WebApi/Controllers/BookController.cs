@@ -1,3 +1,4 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApi.BookOperations.CreateBook;
@@ -16,13 +17,19 @@ namespace WebApi.Controllers
     public class BookController : Controller
     {
         private readonly BookStoreDbContext _context;
+        private readonly IMapper _mapper;
 
         private readonly ILogger<BookController> _logger;
 
-        public BookController(ILogger<BookController> logger, BookStoreDbContext context)
+        public BookController(
+            ILogger<BookController> logger,
+            BookStoreDbContext context,
+            IMapper mapper
+        )
         {
             _logger = logger;
             _context = context;
+            _mapper = mapper;
         }
 
         [HttpGet]
