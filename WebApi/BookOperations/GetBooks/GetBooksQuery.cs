@@ -23,7 +23,7 @@ public class GetBooksQuery
                 new BookViewModel
                 {
                     Title = book.Title,
-                    PublishDate = book.PublishedDate.Date.ToString("dd/MM/yyyy"),
+                    PublishedDate = book.PublishedDate.Date.ToString("dd/MM/yyyy"),
                     PageCount = book.PageCount,
                     Genre = ((GenreEnum)book.GenreId).ToString(),
                 }
@@ -36,7 +36,7 @@ public class GetBooksQuery
     {
         public string? Title { get; set; }
         public int PageCount { get; set; }
-        public string? PublishDate { get; set; }
+        public string? PublishedDate { get; set; }
         public string? Genre { get; set; }
     }
 }
