@@ -31,3 +31,6 @@
 /Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/obj/Debug/net7.0/WebApi.pdb
 /Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/obj/Debug/net7.0/WebApi.genruntimeconfig.cache
 /Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/obj/Debug/net7.0/ref/WebApi.dll
+/Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.dll
+/Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.InMemory.dll
