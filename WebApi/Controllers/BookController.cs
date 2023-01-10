@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using WebApi.BookOperations.GetBooks;
 using WebApi.DBOperations;
 using WebApi.Models;
 
@@ -20,10 +21,12 @@ namespace WebApi.Controllers
         }
 
         [HttpGet]
-        public List<Book> GetBooks()
+        public IActionResult GetBooks()
         {
-            var bookList = _context.Books.OrderBy(x => x.Id).ToList<Book>();
-            return bookList;
+            GetBooksQuery query = new GetBooksQuery(_context);
+
+            var result = query.Handle();
+            return Ok(result);
         }
 
         [HttpGet("{id}")]
