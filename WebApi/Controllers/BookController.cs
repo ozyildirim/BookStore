@@ -44,7 +44,7 @@ namespace WebApi.Controllers
                 return BadRequest();
             }
 
-            _context.Add(newBook);
+            _context.Books.Add(newBook);
             _context.SaveChanges();
             return Ok();
         }
@@ -78,7 +78,7 @@ namespace WebApi.Controllers
             if (book is null)
                 return BadRequest();
 
-            _context.Remove(book);
+            _context.Books.Remove(book);
             _context.SaveChanges();
             return Ok();
         }
