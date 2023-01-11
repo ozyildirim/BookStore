@@ -26,10 +26,10 @@ public class UpdateBookCommand
         book.Title = Model.Title != default ? Model.Title : book.Title;
         _dbContext.SaveChanges();
     }
+}
 
-    public class UpdateBookModel
-    {
-        public string? Title { get; set; }
-        public int GenreId { get; set; }
-    }
+public class UpdateBookModel
+{
+    public string? Title { get; set; }
+    public int GenreId { get; set; }
 }

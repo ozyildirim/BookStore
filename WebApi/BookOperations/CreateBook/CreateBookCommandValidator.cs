@@ -17,7 +17,6 @@ class CreateBookCommandValidator : AbstractValidator<CreateBookCommand>
             .LessThan(DateTime.Now.Date)
             .WithMessage("Published date cannot be equal to current date!");
         RuleFor(command => command.Model.Title)
-            .NotEmpty()
             .MinimumLength(4)
             .WithMessage("Title length must be greater than 4!");
     }

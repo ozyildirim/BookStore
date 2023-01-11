@@ -1,15 +1,15 @@
 using AutoMapper;
 using WebApi.DBOperations;
 
-namespace WebApi.BookOperations.GetBookDetailQuery;
+namespace WebApi.BookOperations.GetBookDetail;
 
-public class GetBookDetalQuery
+public class GetBookDetailQuery
 {
     private readonly BookStoreDbContext _dbContext;
     public int BookId { get; set; }
     private readonly IMapper _mapper;
 
-    public GetBookDetalQuery(IMapper mapper, BookStoreDbContext dbContext)
+    public GetBookDetailQuery(BookStoreDbContext dbContext, IMapper mapper)
     {
         _mapper = mapper;
         _dbContext = dbContext;
@@ -20,7 +20,7 @@ public class GetBookDetalQuery
         var book = _dbContext.Books.SingleOrDefault(x => x.Id == BookId);
 
         if (book is null)
-            throw new InvalidOperationException("Kitap Bulunamadı!");
+            throw new InvalidOperationException("Book not found!");
 
         BookDetailViewModel vm = _mapper.Map<BookDetailViewModel>(book);
         return vm;
@@ -32,5 +32,5 @@ public class BookDetailViewModel
     public string Title { get; set; }
     public string Genre { get; set; }
     public int PageCount { get; set; }
-    public string PublishDate { get; set; }
+    public string PublishedDate { get; set; }
 }

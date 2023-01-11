@@ -33,12 +33,12 @@ public class CreateBookCommand
         _dbContext.Books.Add(book);
         _dbContext.SaveChanges();
     }
+}
 
-    public class CreateBookModel
-    {
-        public string? Title { get; set; }
-        public int GenreId { get; set; }
-        public int PageCount { get; set; }
-        public DateTime PublishedDate { get; set; }
-    }
+public class CreateBookModel
+{
+    public string? Title { get; set; }
+    public int GenreId { get; set; }
+    public int PageCount { get; set; }
+    public DateTime PublishedDate { get; set; }
 }

@@ -36,12 +36,12 @@ public class GetBooksQuery
         // }
         return vm;
     }
+}
 
-    public class BookViewModel
-    {
-        public string? Title { get; set; }
-        public int PageCount { get; set; }
-        public string PublishedDate { get; set; }
-        public string Genre { get; set; }
-    }
+public class BookViewModel
+{
+    public string? Title { get; set; }
+    public int PageCount { get; set; }
+    public string PublishedDate { get; set; }
+    public string Genre { get; set; }
 }
