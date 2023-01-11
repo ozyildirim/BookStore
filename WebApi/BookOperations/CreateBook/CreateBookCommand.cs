@@ -25,13 +25,10 @@ public class CreateBookCommand
         {
             throw new InvalidOperationException("Kitap zaten mevcut!");
         }
-        book = new Book
-        {
-            Title = Model.Title,
-            GenreId = Model.GenreId,
-            PublishedDate = Model.PublishedDate,
-            PageCount = Model.PageCount,
-        };
+
+        // Map the object we get via Model to book variable
+        // and that will be converted into the Book object
+        book = _mapper.Map<Book>(Model);
 
         _dbContext.Books.Add(book);
         _dbContext.SaveChanges();
