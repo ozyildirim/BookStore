@@ -36,3 +36,4 @@
 /Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.InMemory.dll
 /Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/bin/Debug/net7.0/AutoMapper.dll
 /Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/bin/Debug/net7.0/FluentValidation.dll

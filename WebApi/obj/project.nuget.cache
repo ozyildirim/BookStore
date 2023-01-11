@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "CXmf6MGwIur3r+bIiNSs6okTxgD05zCaUcqJuQvQ4lsFqAhk5g3eI+87H82NBl+V+zNgcbCLe/XW8XWxy3H1lQ==",
+  "dgSpecHash": "MFOBTt+bok6Kj9T7qu5m8C0i6ALdcG9qipMURQltOZUeXzCzl+t/hZygeBiCUkOgbdze1DsuDUAhIOQP5n2RSw==",
   "success": true,
   "projectFilePath": "/Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/WebApi.csproj",
   "expectedPackageFiles": [
     "/Users/yildirimkutay/.nuget/packages/automapper/12.0.0/automapper.12.0.0.nupkg.sha512",
     "/Users/yildirimkutay/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.0/automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
+    "/Users/yildirimkutay/.nuget/packages/fluentvalidation/11.4.0/fluentvalidation.11.4.0.nupkg.sha512",
     "/Users/yildirimkutay/.nuget/packages/microsoft.aspnetcore.openapi/7.0.1/microsoft.aspnetcore.openapi.7.0.1.nupkg.sha512",
     "/Users/yildirimkutay/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/yildirimkutay/.nuget/packages/microsoft.entityframeworkcore/7.0.2/microsoft.entityframeworkcore.7.0.2.nupkg.sha512",
