@@ -2,6 +2,7 @@ using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using WebApi.DBOperations;
 using WebApi.Middlewares;
+using WebApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<BookStoreDbContext>(
     options => options.UseInMemoryDatabase(databaseName: "BookStoreDB")
 );
+
+builder.Services.AddSingleton<ILoggerService, ConsoleLogger>();
 
 builder.Services.AddControllers();
 
