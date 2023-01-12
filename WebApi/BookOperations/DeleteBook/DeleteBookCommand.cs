@@ -19,7 +19,7 @@ public class DeleteBookCommand
 
         if (book is null)
         {
-            throw new InvalidOperationException("Kitap bulunamadı!");
+            throw new InvalidOperationException("Book not found!");
         }
 
         _dbContext.Remove(book);

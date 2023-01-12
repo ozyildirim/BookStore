@@ -23,7 +23,7 @@ public class CreateBookCommand
 
         if (book is not null)
         {
-            throw new InvalidOperationException("Kitap zaten mevcut!");
+            throw new InvalidOperationException("Book already exists!");
         }
 
         // Map the object we get via Model to book variable

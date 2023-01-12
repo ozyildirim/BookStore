@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "MFOBTt+bok6Kj9T7qu5m8C0i6ALdcG9qipMURQltOZUeXzCzl+t/hZygeBiCUkOgbdze1DsuDUAhIOQP5n2RSw==",
+  "dgSpecHash": "gXcV03+F+Fdt+qfDPYuw7UKpdjX+K2lqEQ4qBYBQjiQAg+6QmuampaiSpeIG+/eWDpEk4KZDraWJlghkLdKGug==",
   "success": true,
   "projectFilePath": "/Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/WebApi.csproj",
   "expectedPackageFiles": [
@@ -23,6 +23,7 @@
     "/Users/yildirimkutay/.nuget/packages/microsoft.extensions.options/7.0.0/microsoft.extensions.options.7.0.0.nupkg.sha512",
     "/Users/yildirimkutay/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "/Users/yildirimkutay/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
+    "/Users/yildirimkutay/.nuget/packages/newtonsoft.json/13.0.2/newtonsoft.json.13.0.2.nupkg.sha512",
     "/Users/yildirimkutay/.nuget/packages/swashbuckle.aspnetcore/6.4.0/swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "/Users/yildirimkutay/.nuget/packages/swashbuckle.aspnetcore.swagger/6.4.0/swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
     "/Users/yildirimkutay/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.4.0/swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",

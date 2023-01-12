@@ -19,7 +19,7 @@ public class UpdateBookCommand
 
         if (book is null)
         {
-            throw new InvalidOperationException("Kitap bulunamadı!");
+            throw new InvalidOperationException("Book not found!");
         }
 
         book.GenreId = Model.GenreId != default ? Model.GenreId : book.GenreId;
