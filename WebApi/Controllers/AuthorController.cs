@@ -57,5 +57,18 @@ namespace WebApi.Controllers
 
             return Ok();
         }
+
+        [HttpPut("{id}")]
+        public IActionResult UpdateAuthor(int id, [FromBody] UpdateAuthorModel model)
+        {
+            UpdateAuthorCommand command = new UpdateAuthorCommand(_context, _mapper);
+            command.Model = model;
+            command.AuthorId = id;
+            UpdateAuthorCommandValidator validator = new UpdateAuthorCommandValidator();
+            validator.ValidateAndThrow(command);
+            command.Handle();
+
+            return Ok();
+        }
     }
 }

@@ -34,5 +34,6 @@ public class MappingProfile : Profile
         CreateMap<Author, AuthorViewModel>();
         CreateMap<Author, AuthorDetailViewModel>();
         CreateMap<CreateAuthorModel, Author>();
+        CreateMap<UpdateAuthorModel, Author>();
     }
 }
