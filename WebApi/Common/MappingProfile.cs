@@ -16,16 +16,10 @@ public class MappingProfile : Profile
         CreateMap<CreateBookModel, Book>();
 
         CreateMap<Book, BookDetailViewModel>()
-            .ForMember(
-                dest => dest.Genre,
-                opt => opt.MapFrom(src => ((GenreEnum)src.GenreId).ToString())
-            );
+            .ForMember(dest => dest.Genre, opt => opt.MapFrom(src => src.Genre.Name));
 
         CreateMap<Book, BookViewModel>()
-            .ForMember(
-                dest => dest.Genre,
-                opt => opt.MapFrom(src => ((GenreEnum)src.GenreId).ToString())
-            );
+            .ForMember(dest => dest.Genre, opt => opt.MapFrom(src => src.Genre.Name));
         CreateMap<UpdateBookModel, Book>();
 
         CreateMap<Genre, GenreViewModel>();

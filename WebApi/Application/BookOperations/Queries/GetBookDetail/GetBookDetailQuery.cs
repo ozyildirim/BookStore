@@ -1,4 +1,5 @@
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using WebApi.DBOperations;
 
 namespace WebApi.Application.BookOperations.Queries;
@@ -17,7 +18,7 @@ public class GetBookDetailQuery
 
     public BookDetailViewModel Handle()
     {
-        var book = _dbContext.Books.SingleOrDefault(x => x.Id == BookId);
+        var book = _dbContext.Books.Include(x => x.Genre).SingleOrDefault(x => x.Id == BookId);
 
         if (book is null)
             throw new InvalidOperationException("Book not found!");
