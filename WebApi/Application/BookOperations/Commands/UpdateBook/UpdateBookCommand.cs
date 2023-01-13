@@ -1,7 +1,6 @@
 using WebApi.DBOperations;
 
-namespace WebApi.BookOperations.UpdateBook;
-
+namespace WebApi.Application.BookOperations.Commands;
 public class UpdateBookCommand
 {
     private readonly BookStoreDbContext _dbContext;

@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using WebApi.Models;
+using WebApi.Models.Entities;
 
 namespace WebApi.DBOperations;
 
@@ -39,6 +39,12 @@ public class DataGenerator
                     PageCount = 540,
                     PublishedDate = new DateTime(2001, 12, 2)
                 }
+            );
+
+            context.Genres.AddRange(
+                new Genre { Name = "Personal Growth", },
+                new Genre { Name = "Science Fiction" },
+                new Genre { Name = "Novel" }
             );
 
             context.SaveChanges();
