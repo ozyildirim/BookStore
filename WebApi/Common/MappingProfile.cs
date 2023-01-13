@@ -1,4 +1,5 @@
 using AutoMapper;
+using WebApi.Application.AuthorOperations.Queries;
 using WebApi.Application.BookOperations.Commands;
 using WebApi.Application.BookOperations.Queries;
 using WebApi.Application.GenreOperations.Commands;
@@ -22,9 +23,13 @@ public class MappingProfile : Profile
             .ForMember(dest => dest.Genre, opt => opt.MapFrom(src => src.Genre.Name));
         CreateMap<UpdateBookModel, Book>();
 
+        //Genre Mappers
         CreateMap<Genre, GenreViewModel>();
         CreateMap<Genre, GenreDetailViewModel>();
         CreateMap<CreateGenreModel, Genre>();
         CreateMap<UpdateGenreModel, Genre>();
+
+        //Author Mappers
+        CreateMap<Author, AuthorViewModel>();
     }
 }

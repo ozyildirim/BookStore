@@ -47,6 +47,27 @@ public class DataGenerator
                 new Genre { Name = "Novel" }
             );
 
+            context.Authors.AddRange(
+                new Author
+                {
+                    Name = "Kutay",
+                    Surname = "Yıldırım",
+                    Birthdate = new DateTime(1998, 11, 25).Date
+                },
+                new Author
+                {
+                    Name = "Çağan",
+                    Surname = "Bıçakçı",
+                    Birthdate = new DateTime(1998, 09, 12).Date
+                },
+                new Author
+                {
+                    Name = "Hasan",
+                    Surname = "Taşkın",
+                    Birthdate = new DateTime(1998, 1, 13).Date
+                }
+            );
+
             context.SaveChanges();
         }
     }
