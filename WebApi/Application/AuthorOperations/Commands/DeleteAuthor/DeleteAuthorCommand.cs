@@ -22,6 +22,15 @@ public class DeleteAuthorCommand
         if (author is null)
             throw new InvalidOperationException("Author not found!");
 
+        var authorBooks = _context.Books.Where(x => x.AuthorId == AuthorId).ToList();
+
+        if (authorBooks.Count > 0)
+        {
+            throw new InvalidOperationException(
+                "Author has more than one released book! Delete them first!"
+            );
+        }
+
         _context.Remove(author);
         _context.SaveChanges();
     }
