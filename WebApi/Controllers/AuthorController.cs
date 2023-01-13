@@ -70,5 +70,17 @@ namespace WebApi.Controllers
 
             return Ok();
         }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteAuthor(int id)
+        {
+            DeleteAuthorCommand command = new DeleteAuthorCommand(_context, _mapper);
+            command.AuthorId = id;
+            DeleteAuthorCommandValidator validator = new DeleteAuthorCommandValidator();
+            validator.ValidateAndThrow(command);
+            command.Handle();
+
+            return Ok();
+        }
     }
 }
