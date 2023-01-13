@@ -38,7 +38,7 @@ namespace WebApi.Controllers
 
         [HttpGet("{id}")]
         // api/Books/1
-        public IActionResult GetByID(int id)
+        public IActionResult GetById(int id)
         {
             GetBookDetailQuery query = new GetBookDetailQuery(_context, _mapper);
             query.BookId = id;

@@ -1,4 +1,5 @@
 using AutoMapper;
+using WebApi.Application.AuthorOperations.Commands;
 using WebApi.Application.AuthorOperations.Queries;
 using WebApi.Application.BookOperations.Commands;
 using WebApi.Application.BookOperations.Queries;
@@ -31,5 +32,7 @@ public class MappingProfile : Profile
 
         //Author Mappers
         CreateMap<Author, AuthorViewModel>();
+        CreateMap<Author, AuthorDetailViewModel>();
+        CreateMap<CreateAuthorModel, Author>();
     }
 }

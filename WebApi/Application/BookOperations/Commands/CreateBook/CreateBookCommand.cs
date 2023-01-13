@@ -3,6 +3,7 @@ using WebApi.DBOperations;
 using WebApi.Models.Entities;
 
 namespace WebApi.Application.BookOperations.Commands;
+
 public class CreateBookCommand
 {
     public CreateBookModel Model { get; set; }
