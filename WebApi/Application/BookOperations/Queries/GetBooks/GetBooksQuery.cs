@@ -40,6 +40,7 @@ public class GetBooksQuery
 
 public class BookViewModel
 {
+    public int Id { get; set; }
     public string? Title { get; set; }
     public int PageCount { get; set; }
     public string PublishedDate { get; set; }

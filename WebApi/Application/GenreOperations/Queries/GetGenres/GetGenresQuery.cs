@@ -9,7 +9,7 @@ public class GetGenresQuery
 
     private readonly IMapper _mapper;
 
-    public GetGenresQuery(IMapper mapper, BookStoreDbContext dbContext)
+    public GetGenresQuery(BookStoreDbContext dbContext, IMapper mapper)
     {
         _mapper = mapper;
         _context = dbContext;

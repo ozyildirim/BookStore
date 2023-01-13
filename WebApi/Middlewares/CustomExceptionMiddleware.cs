@@ -27,7 +27,7 @@ public class CustomExceptionMiddleware
             await _next(context);
             watch.Stop();
             message =
-                "[Request] HTTP "
+                "[Response] HTTP "
                 + context.Request.Method
                 + " - "
                 + context.Request.Path
