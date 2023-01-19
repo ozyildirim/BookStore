@@ -11,13 +11,13 @@ namespace WebApi.Controllers
     [Route("api/[controller]s")]
     public class GenreController : ControllerBase
     {
-        private readonly BookStoreDbContext _context;
+        private readonly IBookStoreDbContext _context;
         private readonly IMapper _mapper;
         private readonly ILogger<GenreController> _logger;
 
         public GenreController(
             ILogger<GenreController> logger,
-            BookStoreDbContext context,
+            IBookStoreDbContext context,
             IMapper mapper
         )
         {

@@ -10,6 +10,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<BookStoreDbContext>(
     options => options.UseInMemoryDatabase(databaseName: "BookStoreDB")
 );
+builder.Services.AddScoped<IBookStoreDbContext>(
+    provider => provider.GetService<BookStoreDbContext>()
+);
 
 builder.Services.AddSingleton<ILoggerService, ConsoleLogger>();
 

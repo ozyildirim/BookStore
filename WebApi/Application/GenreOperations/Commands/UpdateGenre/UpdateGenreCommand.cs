@@ -8,10 +8,10 @@ public class UpdateGenreCommand
 {
     public int GenreId { get; set; }
     public UpdateGenreModel Model { get; set; }
-    private readonly BookStoreDbContext _context;
+    private readonly IBookStoreDbContext _context;
     private readonly IMapper _mapper;
 
-    public UpdateGenreCommand(BookStoreDbContext context, IMapper mapper)
+    public UpdateGenreCommand(IBookStoreDbContext context, IMapper mapper)
     {
         _mapper = mapper;
         _context = context;

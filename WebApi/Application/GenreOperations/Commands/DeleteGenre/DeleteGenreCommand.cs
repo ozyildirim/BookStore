@@ -5,9 +5,9 @@ namespace WebApi.Application.GenreOperations.Commands;
 public class DeleteGenreCommand
 {
     public int GenreId { get; set; }
-    private readonly BookStoreDbContext _context;
+    private readonly IBookStoreDbContext _context;
 
-    public DeleteGenreCommand(BookStoreDbContext context)
+    public DeleteGenreCommand(IBookStoreDbContext context)
     {
         _context = context;
     }
@@ -18,7 +18,7 @@ public class DeleteGenreCommand
         if (genre is null)
             throw new InvalidOperationException("Genre doesn't exists!");
 
-        _context.Remove(genre);
+        _context.Genres.Remove(genre);
         _context.SaveChanges();
     }
 }
