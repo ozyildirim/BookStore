@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rCxZq8EbQpie88sg8wY+ogQyXdbGQX9LSDT1d6NAMbQx9JI8lMGADHsmg5vN3p78iQsiDLUOG5/LzXOWf2dx/A==",
+  "dgSpecHash": "/75ITR8SgU+BVdCG346bCd5XreheiGfWICRO0VMBV0MqfkI7ZyQv0ie0KEb4Z0V3yGWXcPeuMkdznAUB/8Lx4Q==",
   "success": true,
   "projectFilePath": "/Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/Tests/WebApi.UnitTests/WebApi.UnitTests.csproj",
   "expectedPackageFiles": [
