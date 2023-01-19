@@ -9,18 +9,32 @@ namespace Application.BookOperations.Commands.CreateBook;
 
 public class CreateBookCommandValidatorTests : IClassFixture<CommonTestFixture>
 {
-    [Fact]
-    public void WhenInvalidInputsAreGiven_Validator_ShouldReturnErorrs()
+    [Theory]
+    [InlineData("Lord of the Rings", 0, 0, 0)]
+    [InlineData("Lord of the Rings", 0, 1, 1)]
+    [InlineData("Lord of the Rings", 100, 0, 0)]
+    [InlineData("", 0, 0, 0)]
+    [InlineData("", 100, 1, 1)]
+    [InlineData("", 0, 1, 1)]
+    [InlineData("Lor", 100, 1, 1)]
+    [InlineData("Lor", 0, 0, 0)]
+    [InlineData(" ", 100, 1, 1)]
+    public void WhenInvalidInputsAreGiven_Validator_ShouldReturnErors(
+        string title,
+        int pageCount,
+        int genreId,
+        int authorId
+    )
     {
         //arrange
         CreateBookCommand command = new CreateBookCommand(null, null);
         command.Model = new CreateBookModel
         {
-            Title = "",
-            PublishedDate = DateTime.Now,
-            PageCount = 0,
-            GenreId = 0,
-            AuthorId = 0,
+            Title = title,
+            PublishedDate = DateTime.Now.AddYears(-1),
+            PageCount = pageCount,
+            GenreId = genreId,
+            AuthorId = authorId,
         };
 
         //act
@@ -29,5 +43,45 @@ public class CreateBookCommandValidatorTests : IClassFixture<CommonTestFixture>
 
         //assertion
         result.Errors.Count.Should().BeGreaterThan(0);
+    }
+
+    [Fact]
+    public void WhenDateTimeEqualNowIsGiven_Validator_ShouldReturnError()
+    {
+        //arrange
+        CreateBookCommand command = new CreateBookCommand(null, null);
+        command.Model = new CreateBookModel
+        {
+            Title = "Test Book",
+            PublishedDate = DateTime.Now.Date,
+            PageCount = 100,
+            GenreId = 1,
+            AuthorId = 1,
+        };
+
+        CreateBookCommandValidator validator = new CreateBookCommandValidator();
+        var result = validator.Validate(command);
+
+        result.Errors.Count.Should().BeGreaterThan(0);
+    }
+
+    [Fact]
+    public void WhenValidInputsAreGiven_Validator_ShouldNotReturnError()
+    {
+        //arrange
+        CreateBookCommand command = new CreateBookCommand(null, null);
+        command.Model = new CreateBookModel
+        {
+            Title = "Test Book",
+            PublishedDate = DateTime.Now.AddYears(-1),
+            PageCount = 100,
+            GenreId = 1,
+            AuthorId = 1,
+        };
+
+        CreateBookCommandValidator validator = new CreateBookCommandValidator();
+        var result = validator.Validate(command);
+
+        result.Errors.Count.Should().Be(0);
     }
 }
