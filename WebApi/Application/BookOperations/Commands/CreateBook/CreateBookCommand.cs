@@ -26,6 +26,18 @@ public class CreateBookCommand
             throw new InvalidOperationException("Book already exists!");
         }
 
+        var genre = _dbContext.Genres.SingleOrDefault(x => x.Id == Model.GenreId);
+        if (genre is null)
+        {
+            throw new InvalidOperationException("Selected Genre not found!");
+        }
+
+        var author = _dbContext.Authors.SingleOrDefault(x => x.Id == Model.AuthorId);
+        if (author is null)
+        {
+            throw new InvalidOperationException("Selected Author not found!");
+        }
+
         // Map the object we get via Model to book variable
         // and that will be converted into the Book object
         book = _mapper.Map<Book>(Model);
@@ -39,6 +51,7 @@ public class CreateBookModel
 {
     public string? Title { get; set; }
     public int GenreId { get; set; }
+    public int AuthorId { get; set; }
     public int PageCount { get; set; }
     public DateTime PublishedDate { get; set; }
 }
