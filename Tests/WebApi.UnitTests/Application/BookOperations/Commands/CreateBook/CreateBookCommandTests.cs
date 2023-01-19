@@ -5,14 +5,14 @@ using WebApi.Application.BookOperations.Commands;
 using WebApi.DBOperations;
 using WebApi.Models.Entities;
 
-namespace Application.BookOperations.Commands.CreateCommand;
+namespace Application.BookOperations.Commands.CreateBook;
 
-public class CreateBookCommandTest : IClassFixture<CommonTestFixture>
+public class CreateBookCommandTests : IClassFixture<CommonTestFixture>
 {
     private readonly BookStoreDbContext _context;
     private readonly IMapper _mapper;
 
-    public CreateBookCommandTest(CommonTestFixture testFixture, IMapper mapper)
+    public CreateBookCommandTests(CommonTestFixture testFixture)
     {
         _context = testFixture.Context;
         _mapper = testFixture.Mapper;
@@ -24,7 +24,6 @@ public class CreateBookCommandTest : IClassFixture<CommonTestFixture>
         //arrange
         var book = new Book
         {
-            Id = 1,
             Title =
                 "Test_WhenAlreadyExistsBookTitleIsGiven_InvalidOperationException_ShouldBeReturned",
             PageCount = 100,

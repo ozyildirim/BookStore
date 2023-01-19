@@ -10,7 +10,7 @@ public class CommonTestFixture
     public BookStoreDbContext Context { get; set; }
     public IMapper Mapper { get; set; }
 
-    public CommonTestFixture(BookStoreDbContext context, IMapper mapper)
+    public CommonTestFixture()
     {
         var options = new DbContextOptionsBuilder<BookStoreDbContext>()
             .UseInMemoryDatabase(databaseName: "BookStoreTestDB")
@@ -22,8 +22,9 @@ public class CommonTestFixture
         Context.AddGenres();
         Context.SaveChanges();
 
-        Mapper = new MapperConfiguration(
-            config => config.AddProfile<MappingProfile>()
-        ).CreateMapper();
+        Mapper = new MapperConfiguration(config =>
+        {
+            config.AddProfile<MappingProfile>();
+        }).CreateMapper();
     }
 }
