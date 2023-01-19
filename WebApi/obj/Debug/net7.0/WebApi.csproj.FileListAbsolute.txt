@@ -5,8 +5,15 @@
 /Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/bin/Debug/net7.0/WebApi.runtimeconfig.json
 /Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/bin/Debug/net7.0/WebApi.dll
 /Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/bin/Debug/net7.0/WebApi.pdb
+/Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/bin/Debug/net7.0/AutoMapper.dll
+/Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/bin/Debug/net7.0/FluentValidation.dll
 /Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/bin/Debug/net7.0/Microsoft.AspNetCore.OpenApi.dll
+/Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.dll
+/Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.InMemory.dll
 /Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/bin/Debug/net7.0/Microsoft.OpenApi.dll
+/Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/bin/Debug/net7.0/Newtonsoft.Json.dll
 /Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/bin/Debug/net7.0/Swashbuckle.AspNetCore.Swagger.dll
 /Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -31,10 +38,3 @@
 /Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/obj/Debug/net7.0/WebApi.pdb
 /Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/obj/Debug/net7.0/WebApi.genruntimeconfig.cache
 /Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/obj/Debug/net7.0/ref/WebApi.dll
-/Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.dll
-/Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Abstractions.dll
-/Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.InMemory.dll
-/Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/bin/Debug/net7.0/AutoMapper.dll
-/Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-/Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/bin/Debug/net7.0/FluentValidation.dll
-/Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/WebApi/bin/Debug/net7.0/Newtonsoft.Json.dll

@@ -5,7 +5,6 @@ using WebApi.Application.BookOperations.Commands;
 using WebApi.Application.BookOperations.Queries;
 using WebApi.Application.GenreOperations.Commands;
 using WebApi.Application.GenreOperations.Queries;
-using WebApi.Models;
 using WebApi.Models.Entities;
 
 namespace WebApi.Common;
