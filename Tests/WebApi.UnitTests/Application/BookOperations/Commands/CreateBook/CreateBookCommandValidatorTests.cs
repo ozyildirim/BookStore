@@ -19,7 +19,7 @@ public class CreateBookCommandValidatorTests : IClassFixture<CommonTestFixture>
     [InlineData("Lor", 100, 1, 1)]
     [InlineData("Lor", 0, 0, 0)]
     [InlineData(" ", 100, 1, 1)]
-    public void WhenInvalidInputsAreGiven_Validator_ShouldReturnErors(
+    public void WhenInvalidInputsAreGiven_Validator_ShouldReturnErrors(
         string title,
         int pageCount,
         int genreId,
