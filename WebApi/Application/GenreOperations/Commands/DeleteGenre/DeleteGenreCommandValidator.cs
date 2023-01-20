@@ -6,6 +6,8 @@ public class DeleteGenreCommandValidator : AbstractValidator<DeleteGenreCommand>
 {
     public DeleteGenreCommandValidator()
     {
-        RuleFor(command => command.GenreId).NotEmpty().WithMessage("GenreId must be specified!");
+        RuleFor(command => command.GenreId)
+            .GreaterThanOrEqualTo(0)
+            .WithMessage("GenreId must be specified!");
     }
 }

@@ -7,12 +7,21 @@ using WebApi.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+
+
 builder.Services.AddDbContext<BookStoreDbContext>(
     options => options.UseInMemoryDatabase(databaseName: "BookStoreDB")
 );
 builder.Services.AddScoped<IBookStoreDbContext>(
     provider => provider.GetService<BookStoreDbContext>()
 );
+
+// builder.Services
+//     .AddEntityFrameworkNpgsql()
+//     .AddDbContext<BookStoreDbContext>(
+//         opt => opt.UseNpgsql(builder.Configuration.GetConnectionString("WebApiDatabase"))
+//     );
 
 builder.Services.AddSingleton<ILoggerService, ConsoleLogger>();
 

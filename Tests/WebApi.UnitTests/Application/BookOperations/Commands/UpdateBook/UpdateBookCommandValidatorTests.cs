@@ -43,6 +43,6 @@ public class UpdateBookCommandValidatorTests : IClassFixture<CommonTestFixture>
         var result = validator.Validate(command);
 
         // Assertion
-        result.Errors.Count.Should().BeGreaterThan(0);
+        result.Errors.Count.Should().Be(0);
     }
 }

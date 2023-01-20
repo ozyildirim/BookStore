@@ -121,3 +121,6 @@
 /Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/Tests/WebApi.UnitTests/obj/Debug/net7.0/WebApi.UnitTests.pdb
 /Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/Tests/WebApi.UnitTests/obj/Debug/net7.0/WebApi.UnitTests.genruntimeconfig.cache
 /Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/Tests/WebApi.UnitTests/obj/Debug/net7.0/ref/WebApi.UnitTests.dll
+/Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/Tests/WebApi.UnitTests/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/Tests/WebApi.UnitTests/bin/Debug/net7.0/Npgsql.dll
+/Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/Tests/WebApi.UnitTests/bin/Debug/net7.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll

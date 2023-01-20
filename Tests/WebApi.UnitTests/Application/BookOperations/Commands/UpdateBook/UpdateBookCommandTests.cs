@@ -18,7 +18,7 @@ public class UpdateBookCommandTests : IClassFixture<CommonTestFixture>
     }
 
     [Fact]
-    public void WhenBookIdDoesNotExistInDatabase_InvalidOperationException_ShouldBeReturned()
+    public void WhenGivenBookIdDoesNotExistInDatabase_InvalidOperationException_ShouldBeReturned()
     {
         // Arrange
 
