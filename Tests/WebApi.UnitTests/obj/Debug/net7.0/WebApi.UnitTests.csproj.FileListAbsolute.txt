@@ -124,3 +124,10 @@
 /Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/Tests/WebApi.UnitTests/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Relational.dll
 /Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/Tests/WebApi.UnitTests/bin/Debug/net7.0/Npgsql.dll
 /Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/Tests/WebApi.UnitTests/bin/Debug/net7.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/Tests/WebApi.UnitTests/bin/Debug/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/Tests/WebApi.UnitTests/bin/Debug/net7.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/Tests/WebApi.UnitTests/bin/Debug/net7.0/Microsoft.IdentityModel.Logging.dll
+/Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/Tests/WebApi.UnitTests/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.dll
+/Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/Tests/WebApi.UnitTests/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/Tests/WebApi.UnitTests/bin/Debug/net7.0/Microsoft.IdentityModel.Tokens.dll
+/Users/yildirimkutay/Projects/dotnet-learning-path/patika/BookStore/Tests/WebApi.UnitTests/bin/Debug/net7.0/System.IdentityModel.Tokens.Jwt.dll

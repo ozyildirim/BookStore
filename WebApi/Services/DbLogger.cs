@@ -1,6 +1,6 @@
 using WebApi.Services;
 
-class DbLogger : ILoggerService
+public class DbLogger : ILoggerService
 {
     public void Write(string message)
     {
