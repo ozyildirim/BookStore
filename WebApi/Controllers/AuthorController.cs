@@ -4,9 +4,11 @@ using WebApi.Application.AuthorOperations.Queries;
 using WebApi.DBOperations;
 using FluentValidation;
 using WebApi.Application.AuthorOperations.Commands;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebApi.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]s")]
     public class AuthorController : ControllerBase

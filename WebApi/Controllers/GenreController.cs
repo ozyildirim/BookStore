@@ -4,9 +4,11 @@ using WebApi.Application.GenreOperations.Commands;
 using WebApi.Application.GenreOperations.Queries;
 using WebApi.DBOperations;
 using FluentValidation;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebApi.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]s")]
     public class GenreController : ControllerBase
