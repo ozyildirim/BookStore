@@ -5,6 +5,7 @@ using WebApi.Application.BookOperations.Commands;
 using WebApi.Application.BookOperations.Queries;
 using WebApi.Application.GenreOperations.Commands;
 using WebApi.Application.GenreOperations.Queries;
+using WebApi.Application.UserOperations;
 using WebApi.Models.Entities;
 
 namespace WebApi.Common;
@@ -42,5 +43,8 @@ public class MappingProfile : Profile
         CreateMap<Author, AuthorDetailViewModel>();
         CreateMap<CreateAuthorModel, Author>();
         CreateMap<UpdateAuthorModel, Author>();
+
+        //User Mappers
+        CreateMap<CreateUserModel, User>();
     }
 }

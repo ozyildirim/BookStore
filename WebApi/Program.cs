@@ -1,5 +1,8 @@
 using System.Reflection;
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using WebApi.DBOperations;
 using WebApi.Middlewares;
 using WebApi.Services;
@@ -8,7 +11,26 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+var configuration = builder.Configuration;
 
+builder.Services
+    .AddAuthentication()
+    .AddJwtBearer(opt =>
+    {
+        opt.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+        {
+            ValidateAudience = true,
+            ValidateIssuer = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = configuration["Token:Issuer"],
+            ValidAudience = configuration["Token:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(configuration["Token:SecurityKey"])
+            ),
+            ClockSkew = TimeSpan.Zero
+        };
+    });
 
 builder.Services.AddDbContext<BookStoreDbContext>(
     options => options.UseInMemoryDatabase(databaseName: "BookStoreDB")
@@ -49,6 +71,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 //Custom Exception Middleware
