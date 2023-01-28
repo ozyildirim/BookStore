@@ -50,6 +50,18 @@ namespace WebApi.Controllers
         [HttpPost]
         public IActionResult AddAuthor([FromBody] CreateAuthorModel model)
         {
+            var author = _context.Authors.SingleOrDefault(
+                author =>
+                    author.Name == model.Name
+                    && author.Surname == model.Surname
+                    && author.Birthdate == model.Birthdate
+            );
+
+            if (author is not null)
+            {
+                throw new InvalidOperationException("Author already exists!");
+            }
+
             CreateAuthorCommand command = new CreateAuthorCommand(_context, _mapper);
             command.Model = model;
             CreateAuthorCommandValidator validator = new CreateAuthorCommandValidator();

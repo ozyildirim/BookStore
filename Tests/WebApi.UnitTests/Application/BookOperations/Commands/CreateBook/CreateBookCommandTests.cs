@@ -19,7 +19,7 @@ public class CreateBookCommandTests : IClassFixture<CommonTestFixture>
     }
 
     [Fact]
-    public void WhenAlreadyExistsBookTitleIsGiven_InvalidOperationException_ShouldBeReturned()
+    public void WhenExistingBookTitleIsGiven_InvalidOperationException_ShouldBeReturned()
     {
         //arrange
         var book = new Book

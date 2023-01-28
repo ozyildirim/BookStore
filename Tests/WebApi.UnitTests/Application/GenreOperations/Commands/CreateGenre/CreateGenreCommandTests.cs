@@ -19,7 +19,7 @@ public class CreateGenreCommandTests : IClassFixture<CommonTestFixture>
     }
 
     [Fact]
-    public void WhenGenreThatExistsIsGivenInDatabase_InvalidOperationException_ShouldBeReturned()
+    public void WhenExistingGenreIsGiven_InvalidOperationException_ShouldBeReturned()
     {
         // Arrange
         var genre = new Genre { IsActive = true, Name = "Test Genre" };
