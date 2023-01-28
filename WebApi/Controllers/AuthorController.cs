@@ -88,7 +88,7 @@ namespace WebApi.Controllers
         [HttpDelete("{id}")]
         public IActionResult DeleteAuthor(int id)
         {
-            DeleteAuthorCommand command = new DeleteAuthorCommand(_context, _mapper);
+            DeleteAuthorCommand command = new DeleteAuthorCommand(_context);
             command.AuthorId = id;
             DeleteAuthorCommandValidator validator = new DeleteAuthorCommandValidator();
             validator.ValidateAndThrow(command);

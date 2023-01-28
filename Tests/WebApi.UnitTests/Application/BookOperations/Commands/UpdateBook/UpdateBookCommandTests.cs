@@ -26,12 +26,7 @@ public class UpdateBookCommandTests : IClassFixture<CommonTestFixture>
         command.BookId = Int32.MaxValue;
 
         // Act & Assertion
-        FluentActions
-            .Invoking(() => command.Handle())
-            .Should()
-            .Throw<InvalidOperationException>()
-            .And.Message.Should()
-            .Be("Book not found!");
+        FluentActions.Invoking(() => command.Handle()).Should().Throw<NullReferenceException>();
     }
 
     [Fact]

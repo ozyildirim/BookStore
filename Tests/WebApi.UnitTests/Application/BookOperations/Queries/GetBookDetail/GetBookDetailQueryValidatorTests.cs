@@ -9,7 +9,7 @@ public class GetBookDetailQueryValidatorTests : IClassFixture<CommonTestFixture>
     [Theory]
     [InlineData(null)]
     [InlineData(-1)]
-    public void WhenGivenParametersAreNotValidAndNotExist_Validator_ShouldReturnErrors(int bookId)
+    public void WhenGivenParametersAreNotValidAndNotExist_Validator_ShouldReturnErrors(int? bookId)
     {
         // Arrange
         GetBookDetailQuery query = new GetBookDetailQuery(null, null);

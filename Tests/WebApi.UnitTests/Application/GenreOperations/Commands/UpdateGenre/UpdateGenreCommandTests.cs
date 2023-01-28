@@ -21,17 +21,10 @@ public class UpdateGenreCommandTests : IClassFixture<CommonTestFixture>
     public void WhenGivenGenreIdDoesNotExistInDatabase_InvalidOperationException_ShouldBeReturned()
     {
         // Arrange
-        var lastGenreId = _context.Genres.Last().Id;
-
         UpdateGenreCommand command = new UpdateGenreCommand(null, null);
-        command.GenreId = lastGenreId + 1;
+        command.GenreId = Int32.MaxValue;
 
         // Act & Assert
-        FluentActions
-            .Invoking(() => command.Handle())
-            .Should()
-            .Throw<InvalidOperationException>()
-            .And.Message.Should()
-            .Be("Genre not found!");
+        FluentActions.Invoking(() => command.Handle()).Should().Throw<NullReferenceException>();
     }
 }

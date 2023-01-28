@@ -1,9 +1,6 @@
-using AutoMapper;
 using FluentAssertions;
 using TestSetup;
 using WebApi.Application.BookOperations.Commands;
-using WebApi.DBOperations;
-using WebApi.Models.Entities;
 
 namespace Application.BookOperations.Commands.CreateBook;
 

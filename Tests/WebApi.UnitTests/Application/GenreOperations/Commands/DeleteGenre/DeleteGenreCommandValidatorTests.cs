@@ -7,8 +7,9 @@ namespace Application.GenreOperations.Commands.DeleteGenre;
 public class DeleteGenreCommandValidatorTests : IClassFixture<CommonTestFixture>
 {
     [Theory]
+    [InlineData(-1)]
     [InlineData(null)]
-    public void WhenInvalidGenreIdIsGiven_Validator_ShouldReturnError(int id)
+    public void WhenInvalidGenreIdIsGiven_Validator_ShouldReturnError(int? id)
     {
         // Arrange
         DeleteGenreCommand command = new DeleteGenreCommand(null);

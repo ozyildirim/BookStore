@@ -10,12 +10,10 @@ namespace Application.BookOperations.Commands.DeleteBook;
 public class DeleteBookCommandTests : IClassFixture<CommonTestFixture>
 {
     private readonly BookStoreDbContext _context;
-    private readonly IMapper _mapper;
 
     public DeleteBookCommandTests(CommonTestFixture testFixture)
     {
         _context = testFixture.Context;
-        _mapper = testFixture.Mapper;
     }
 
     [Fact]
