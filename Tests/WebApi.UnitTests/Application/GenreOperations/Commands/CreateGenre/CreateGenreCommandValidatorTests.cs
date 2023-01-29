@@ -12,7 +12,7 @@ public class CreateGenreCommandValidatorTests : IClassFixture<CommonTestFixture>
     [InlineData("1")]
     [InlineData("12")]
     [InlineData("123")]
-    public void WhenInvalidInputIsGiven_Validator_ShouldReturnErrors(string name)
+    public void WhenInvalidInputIsGiven_Validator_ShouldReturnErrors(string? name)
     {
         // Arrange
         CreateGenreCommand command = new CreateGenreCommand(null, null);

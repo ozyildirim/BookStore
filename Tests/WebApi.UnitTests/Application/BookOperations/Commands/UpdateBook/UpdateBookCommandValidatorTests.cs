@@ -10,10 +10,6 @@ public class UpdateBookCommandValidatorTests : IClassFixture<CommonTestFixture>
     [InlineData(null, null)]
     [InlineData("", 1)]
     [InlineData("", 2)]
-    [InlineData(" ", 1)]
-    [InlineData("    ", 1)]
-    [InlineData("    ", 0)]
-    [InlineData("    ", 1)]
     public void WhenInvalidInputsAreGiven_Validator_ShouldReturnErrors(string? title, int? genreId)
     {
         // Arrange

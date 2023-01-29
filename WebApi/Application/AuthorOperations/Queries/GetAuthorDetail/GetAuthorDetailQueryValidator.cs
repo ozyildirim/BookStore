@@ -6,6 +6,10 @@ public class GetAuthorDetailQueryValidator : AbstractValidator<GetAuthorDetailQu
 {
     public GetAuthorDetailQueryValidator()
     {
-        RuleFor(query => query.AuthorId).NotEmpty().WithMessage("Author Id must be specified!");
+        RuleFor(query => query.AuthorId)
+            .NotEmpty()
+            .NotNull()
+            .GreaterThanOrEqualTo(0)
+            .WithMessage("Author Id must be greater than or equal to 0!");
     }
 }

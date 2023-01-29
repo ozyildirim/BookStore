@@ -7,7 +7,7 @@ public class GetAuthorDetailQuery
 {
     private readonly IBookStoreDbContext _context;
     private readonly IMapper _mapper;
-    public int AuthorId { get; set; }
+    public int? AuthorId { get; set; }
 
     public GetAuthorDetailQuery(IBookStoreDbContext context, IMapper mapper)
     {
