@@ -7,7 +7,7 @@ public class GetGenreDetailQuery
 {
     private readonly IBookStoreDbContext _context;
     private readonly IMapper _mapper;
-    public int GenreId { get; set; }
+    public int? GenreId { get; set; }
 
     public GetGenreDetailQuery(IBookStoreDbContext context, IMapper mapper)
     {

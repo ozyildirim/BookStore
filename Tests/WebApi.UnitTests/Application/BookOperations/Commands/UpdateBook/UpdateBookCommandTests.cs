@@ -4,7 +4,7 @@ using TestSetup;
 using WebApi.Application.BookOperations.Commands;
 using WebApi.DBOperations;
 
-namespace Application.BookOperations.Commands.UpdateBook;
+namespace Application.BookOperations.Commands;
 
 public class UpdateBookCommandTests : IClassFixture<CommonTestFixture>
 {
@@ -22,11 +22,11 @@ public class UpdateBookCommandTests : IClassFixture<CommonTestFixture>
     {
         // Arrange
 
-        UpdateBookCommand command = new UpdateBookCommand(null, null);
+        UpdateBookCommand command = new UpdateBookCommand(_context, _mapper);
         command.BookId = Int32.MaxValue;
 
         // Act & Assertion
-        FluentActions.Invoking(() => command.Handle()).Should().Throw<NullReferenceException>();
+        FluentActions.Invoking(() => command.Handle()).Should().Throw<InvalidOperationException>();
     }
 
     [Fact]

@@ -2,7 +2,7 @@ using FluentAssertions;
 using TestSetup;
 using WebApi.Application.BookOperations.Commands;
 
-namespace Application.BookOperations.Commands.CreateBook;
+namespace Application.BookOperations.Commands;
 
 public class CreateBookCommandValidatorTests : IClassFixture<CommonTestFixture>
 {

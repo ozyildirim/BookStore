@@ -4,7 +4,7 @@ using TestSetup;
 using WebApi.Application.GenreOperations.Commands;
 using WebApi.DBOperations;
 
-namespace Application.GenreOperations.Commands.UpdateGenre;
+namespace Application.GenreOperations.Commands;
 
 public class UpdateGenreCommandTests : IClassFixture<CommonTestFixture>
 {
@@ -21,10 +21,10 @@ public class UpdateGenreCommandTests : IClassFixture<CommonTestFixture>
     public void WhenGivenGenreIdDoesNotExistInDatabase_InvalidOperationException_ShouldBeReturned()
     {
         // Arrange
-        UpdateGenreCommand command = new UpdateGenreCommand(null, null);
+        UpdateGenreCommand command = new UpdateGenreCommand(_context, _mapper);
         command.GenreId = Int32.MaxValue;
 
         // Act & Assert
-        FluentActions.Invoking(() => command.Handle()).Should().Throw<NullReferenceException>();
+        FluentActions.Invoking(() => command.Handle()).Should().Throw<InvalidOperationException>();
     }
 }

@@ -2,7 +2,7 @@ using FluentAssertions;
 using TestSetup;
 using WebApi.Application.GenreOperations.Commands;
 
-namespace Application.GenreOperations.Commands.DeleteGenre;
+namespace Application.GenreOperations.Commands;
 
 public class DeleteGenreCommandValidatorTests : IClassFixture<CommonTestFixture>
 {

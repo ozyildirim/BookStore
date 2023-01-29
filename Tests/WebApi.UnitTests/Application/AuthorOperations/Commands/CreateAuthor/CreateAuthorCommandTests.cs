@@ -5,7 +5,7 @@ using WebApi.Application.AuthorOperations.Commands;
 using WebApi.DBOperations;
 using WebApi.Models.Entities;
 
-namespace Application.AuthorOperations.Commands.CreateAuthor;
+namespace Application.AuthorOperations.Commands;
 
 public class CreateAuthorCommandTests : IClassFixture<CommonTestFixture>
 {

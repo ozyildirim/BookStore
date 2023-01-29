@@ -4,7 +4,7 @@ using TestSetup;
 using WebApi.Application.GenreOperations.Commands;
 using WebApi.DBOperations;
 
-namespace Application.GenreOperations.Commands.DeleteGenre;
+namespace Application.GenreOperations.Commands;
 
 public class DeleteGenreCommandTests : IClassFixture<CommonTestFixture>
 {

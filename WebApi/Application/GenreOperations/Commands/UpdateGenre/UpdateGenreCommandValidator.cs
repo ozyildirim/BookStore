@@ -7,6 +7,7 @@ public class UpdateGenreCommandValidator : AbstractValidator<UpdateGenreCommand>
     public UpdateGenreCommandValidator()
     {
         RuleFor(command => command.Model.Name)
+            .NotNull()
             .MinimumLength(4)
             .WithMessage("Genre name must be more than 4 characters!");
         ;

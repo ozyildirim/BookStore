@@ -5,7 +5,7 @@ using WebApi.Application.BookOperations.Commands;
 using WebApi.DBOperations;
 using WebApi.Models.Entities;
 
-namespace Application.BookOperations.Commands.CreateBook;
+namespace Application.BookOperations.Commands;
 
 public class CreateBookCommandTests : IClassFixture<CommonTestFixture>
 {

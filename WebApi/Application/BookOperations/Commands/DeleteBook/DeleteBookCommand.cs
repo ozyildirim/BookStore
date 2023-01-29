@@ -6,7 +6,7 @@ public class DeleteBookCommand
 {
     private readonly IBookStoreDbContext _dbContext;
 
-    public int BookId { get; set; }
+    public int? BookId { get; set; }
 
     public DeleteBookCommand(IBookStoreDbContext dbContext)
     {

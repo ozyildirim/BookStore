@@ -2,7 +2,7 @@ using FluentAssertions;
 using TestSetup;
 using WebApi.Application.GenreOperations.Commands;
 
-namespace Application.GenreOperations.Commands.CreateGenre;
+namespace Application.GenreOperations.Commands;
 
 public class CreateGenreCommandValidatorTests : IClassFixture<CommonTestFixture>
 {

@@ -2,14 +2,14 @@ using FluentAssertions;
 using TestSetup;
 using WebApi.Application.BookOperations.Queries;
 
-namespace Application.BookOperations.Queries.GetBookDetail;
+namespace Application.BookOperations.Queries;
 
 public class GetBookDetailQueryValidatorTests : IClassFixture<CommonTestFixture>
 {
     [Theory]
     [InlineData(null)]
     [InlineData(-1)]
-    public void WhenGivenParametersAreNotValidAndNotExist_Validator_ShouldReturnErrors(int? bookId)
+    public void WhenInvalidInputsAreGiven_Validator_ShouldReturnError(int? bookId)
     {
         // Arrange
         GetBookDetailQuery query = new GetBookDetailQuery(null, null);
@@ -26,7 +26,7 @@ public class GetBookDetailQueryValidatorTests : IClassFixture<CommonTestFixture>
     [Theory]
     [InlineData(0)]
     [InlineData(2)]
-    public void WhenGivenParametersAreValidAndExist_Validator_ShouldNotReturnErrors(int bookId)
+    public void WhenGivenParametersAreValid_Validator_ShouldNotReturnErrors(int bookId)
     {
         // Arrange
         GetBookDetailQuery query = new GetBookDetailQuery(null, null);

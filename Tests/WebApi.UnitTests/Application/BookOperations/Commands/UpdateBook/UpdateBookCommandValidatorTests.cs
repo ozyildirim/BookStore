@@ -2,18 +2,19 @@ using FluentAssertions;
 using TestSetup;
 using WebApi.Application.BookOperations.Commands;
 
-namespace Application.BookOperations.Commands.UpdateBook;
+namespace Application.BookOperations.Commands;
 
 public class UpdateBookCommandValidatorTests : IClassFixture<CommonTestFixture>
 {
     [Theory]
+    [InlineData(null, null)]
     [InlineData("", 1)]
     [InlineData("", 2)]
     [InlineData(" ", 1)]
     [InlineData("    ", 1)]
     [InlineData("    ", 0)]
     [InlineData("    ", 1)]
-    public void WhenInvalidInputsAreGiven_Validator_ShouldReturnErrors(string title, int genreId)
+    public void WhenInvalidInputsAreGiven_Validator_ShouldReturnErrors(string? title, int? genreId)
     {
         // Arrange
         var book = new UpdateBookModel { Title = title, GenreId = genreId };

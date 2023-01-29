@@ -5,7 +5,7 @@ using WebApi.Application.BookOperations.Commands;
 using WebApi.DBOperations;
 using WebApi.Models.Entities;
 
-namespace Application.BookOperations.Commands.DeleteBook;
+namespace Application.BookOperations.Commands;
 
 public class DeleteBookCommandValidatorTests : IClassFixture<CommonTestFixture>
 {
@@ -19,6 +19,7 @@ public class DeleteBookCommandValidatorTests : IClassFixture<CommonTestFixture>
     }
 
     [Theory]
+    [InlineData(null)]
     [InlineData(0)]
     [InlineData(-1)]
     [InlineData(-2)]

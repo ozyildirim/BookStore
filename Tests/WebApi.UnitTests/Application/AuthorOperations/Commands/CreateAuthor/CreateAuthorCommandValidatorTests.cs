@@ -2,7 +2,7 @@ using FluentAssertions;
 using TestSetup;
 using WebApi.Application.AuthorOperations.Commands;
 
-namespace Application.AuthorOperations.Commands.CreateAuthor;
+namespace Application.AuthorOperations.Commands;
 
 public class CreateAuthorCommandValidatorTests : IClassFixture<CommonTestFixture>
 {

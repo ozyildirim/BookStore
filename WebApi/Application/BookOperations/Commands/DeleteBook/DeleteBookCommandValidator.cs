@@ -7,6 +7,7 @@ public class DeleteBookCommandValidator : AbstractValidator<DeleteBookCommand>
     public DeleteBookCommandValidator()
     {
         RuleFor(command => command.BookId)
+            .NotNull()
             .GreaterThan(0)
             .WithMessage(errorMessage: "Book Id must be greater than 0!");
     }

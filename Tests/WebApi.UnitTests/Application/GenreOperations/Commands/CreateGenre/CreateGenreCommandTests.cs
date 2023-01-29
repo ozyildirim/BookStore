@@ -5,7 +5,7 @@ using WebApi.Application.GenreOperations.Commands;
 using WebApi.DBOperations;
 using WebApi.Models.Entities;
 
-namespace Application.GenreOperations.Commands.CreateGenre;
+namespace Application.GenreOperations.Commands;
 
 public class CreateGenreCommandTests : IClassFixture<CommonTestFixture>
 {

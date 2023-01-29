@@ -8,7 +8,7 @@ public class UpdateBookCommand
 {
     private readonly IBookStoreDbContext _context;
     private readonly IMapper _mapper;
-    public int BookId { get; set; }
+    public int? BookId { get; set; }
     public UpdateBookModel Model { get; set; }
 
     public UpdateBookCommand(IBookStoreDbContext dbContext, IMapper mapper)
@@ -36,6 +36,6 @@ public class UpdateBookCommand
 
 public class UpdateBookModel
 {
-    public string Title { get; set; }
-    public int GenreId { get; set; }
+    public string? Title { get; set; }
+    public int? GenreId { get; set; }
 }

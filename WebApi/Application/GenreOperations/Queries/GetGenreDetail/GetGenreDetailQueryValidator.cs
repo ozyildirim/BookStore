@@ -5,6 +5,9 @@ public class GetGenreDetailQueryValidator : AbstractValidator<GetGenreDetailQuer
 {
     public GetGenreDetailQueryValidator()
     {
-        RuleFor(command => command.GenreId).NotEmpty().WithMessage("GenreId must be specified!");
+        RuleFor(command => command.GenreId).NotNull().WithMessage("GenreId must be specified!");
+        RuleFor(command => command.GenreId)
+            .GreaterThanOrEqualTo(0)
+            .WithMessage("GenreId must be 0 or greater!");
     }
 }

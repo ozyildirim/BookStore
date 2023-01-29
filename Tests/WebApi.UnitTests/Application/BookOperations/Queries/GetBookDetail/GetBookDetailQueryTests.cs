@@ -5,7 +5,7 @@ using WebApi.Application.BookOperations.Queries;
 using WebApi.DBOperations;
 using WebApi.Models.Entities;
 
-namespace Application.BookOperations.Queries.GetBookDetail;
+namespace Application.BookOperations.Queries;
 
 public class GetBookDetailQueryTests : IClassFixture<CommonTestFixture>
 {
@@ -41,10 +41,7 @@ public class GetBookDetailQueryTests : IClassFixture<CommonTestFixture>
         GetBookDetailQuery query = new GetBookDetailQuery(_context, _mapper);
         query.BookId = 1;
 
-        // Act
-        FluentActions.Invoking(() => query.Handle()).Invoke();
-
-        // // Assert
+        // Act && Assert
         var book = _context.Books.SingleOrDefault(x => x.Id == query.BookId);
         book.Should().NotBeNull();
         book.Should().BeOfType<Book>();

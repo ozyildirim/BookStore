@@ -4,7 +4,7 @@ using TestSetup;
 using WebApi.Application.AuthorOperations.Commands;
 using WebApi.DBOperations;
 
-namespace Application.AuthorOperations.Commands.DeleteAuthor;
+namespace Application.AuthorOperations.Commands;
 
 public class DeleteAuthorCommandTests : IClassFixture<CommonTestFixture>
 {
